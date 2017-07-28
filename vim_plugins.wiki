@@ -1,0 +1,66 @@
+== Navigation ==
+    * easymotion
+    * tmux navigator
+
+== File navigation ==
+    * nerdtree
+    * nerdtree syntax highlight
+    * nerdtree git plugin
+
+== Syntax check ==
+    * syntastic
+
+== Search ==
+    * fzf
+
+== Complete ==
+    * youcompleteme
+    * supertab
+
+== Snippets ==
+    * ultisnips
+    * vim-snippets
+
+== Comments == 
+    * tcomment_vim
+
+== Git ==
+    * fugitive
+    * git
+    * gitgutter
+    * gv
+
+== Undo ==
+    * undotree
+
+== Visual ==
+    * airline
+    * airline-themes
+    * devicons
+
+== Useful == 
+    * incsearch
+    * unimpaired
+    * auto pairs
+    * surround
+
+== Misc ==
+    * json
+    * indent guides
+    * indentline
+    * simplyifold
+    * fastfold
+    * l9
+    * misc
+    * vimwiki
+    * peekaboo
+
+== Python ==
+    * python-mode
+    * pytest
+    * virtualenv
+    * django-plus
+    
+== Colorschemes == 
+    * Gruvbox
+    * Base 16
