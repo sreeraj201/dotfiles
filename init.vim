@@ -67,10 +67,17 @@ Plug 'junegunn/vim-peekaboo' | Plug 'junegunn/gv.vim'
 " Tpope
 Plug 'tpope/vim-surround' | Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-unimpaired' | Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-eunuch' | Plug 'tpope/tpope-vim-abolish'
 
 " Python
-Plug 'alfredodeza/pytest.vim', { 'for': 'python' }
+Plug 'alfredodeza/pytest.vim', { 'for': 'python' } | Plug 'alfredodeza/coveragepy.vim', { 'for': 'python' }
 Plug 'bfredl/nvim-ipy' | Plug 'bfredl/nvim-jupyter'
+Plug 'heavenshell/vim-pydocstring', { 'for': 'python' }
+Plug 'tweekmonster/django-plus.vim'
+
+" Javascript
+Plug 'othree/javascript-libraries-syntax.vim' 
+Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
 
 " Testing with terminal
 Plug 'janko-m/vim-test' | Plug 'kassio/neoterm'
@@ -86,6 +93,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mbbill/undotree'
 Plug 'Yggdroot/indentLine' | Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ervandew/supertab'
+Plug 'brooth/far.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css'] }
@@ -146,7 +154,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Neosnippets
 " Plugin key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
@@ -174,7 +181,6 @@ let g:neomake_python_flake8_maker = {
         \ '%-G%.%#',
     \ }
 let g:neomake_python_enabled_makers = ['flake8']
-""" define error symbols in gutter
 
 let g:neomake_error_sign = {
   \ 'text': '✖',
@@ -193,7 +199,6 @@ map <silent> <leader>tT :TestSuite<CR>
 map <silent> <leader>tr :TestLast<CR>
 map <silent> <leader>tg :TestVisit<CR>
 let test#strategy = "neoterm"
-" vertical split instead of the default horizontal
 let g:neoterm_position = "vertical"
 
 " Pytest
@@ -207,6 +212,8 @@ nmap <silent><Leader>ptu <Esc>:Pytest function<CR>
 let g:neoformat_basic_format_align = 1
 let g:neoformat_basic_format_retab = 1
 let g:neoformat_basic_format_trim = 1
+let g:neoformat_enabled_python = ['autopep8']
+noremap <buffer> <F7> :Neoformat<CR> <bar> :w <CR>
 
 " Vim Ipython
 map <silent> <c-s>   <Plug>(IPy-Run)
